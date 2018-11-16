@@ -1,0 +1,187 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情页</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/listData.js"></script>
+    <script src="js/articleData.js"></script>
+</head>
+
+<body>
+    <!-- <div style="width: 0px;height: 0px;
+                 border-bottom:200px solid yellow;
+                 border-top: 200px solid transparent;
+                 border-left: 200px solid transparent;
+                 border-right: 200px solid transparent;
+    " onclick="show()"></div> -->
+    <div class="wrapper">
+        <!--头部导航-->
+        <header>
+            <div class="headerCenter clearfix">
+                <div class="logo">
+                    <img src="img/logo.png" />
+                </div>
+                <nav class="topNav">
+                    <ul class="clearfix">
+                        <li>首页<div class="plush"></div>
+                        </li>
+                        <li class="div">
+                            小鸟掌学
+                            <span class="jiantou">
+                                <img src="img/nav_xiajiantou.png" />
+                            </span>
+                            <div class="plush">
+                                <p>小鸟掌学主页</p>
+                                <p>小鸟掌学概述</p>
+                                <p>对企业的价值</p>
+                                <p>小鸟掌云</p>
+                                <p>微课联盟</p>
+                                <p>APP下载</p>
+                            </div>
+                        </li>
+                        <li>小鸟动态<div class="plush"></div>
+                        </li>
+                        <li class="div">
+                            企业文化
+                            <span class="jiantou">
+                                <img src="img/nav_xiajiantou.png" />
+                            </span>
+                            <div class="plush">
+                                <p>公司理念</p>
+                                <p>公司文化</p>
+                                <p>公司氛围</p>
+                            </div>
+                        </li>
+                        <li class="div">
+                            人力资源
+                            <span class="jiantou">
+                                <img src="img/nav_xiajiantou.png" />
+                            </span>
+                            <div class="plush">
+                                <p>人才理念</p>
+                                <p>团队介绍</p>
+                                <p>招聘信息</p>
+                            </div>
+                        </li>
+                        <li>联系我们<div class="plush"></div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!--主体内容-->
+        <div class="mainContent listContent clearfix">
+            <!--版心-->
+            <div class="mainCenter listCenter clearfix">
+                <!--公司简介标题-->
+                <div class="company">
+                    <h1>详情</h1>
+                    <p>About&nbsp;&nbsp;&nbsp;Company</p>
+                </div>
+                <!--公司简介下面省略号-->
+                <div class="now clearfix">
+                    <img src="img/next&prev_now.png" />
+                    <img src="img/next&prev_now.png" />
+                    <img src="img/next&prev_now.png" />
+                </div>
+                <!--毛笔-->
+                <div class="liebiao">
+                    <h2>列表<span></span></h2>
+
+                </div>
+                <!-- 模板盒子 -->
+                <div id="modelDiv">
+                       
+                </div>
+            </div>
+            <div class="fudong"></div>
+        </div>
+        <!-- 底部   音乐都来咪 -->
+        <footer class="hhh">
+            <div class="mainYin">
+                <ul class="clearfix">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="rightBtn">
+                    <div class="topJian"></div>
+                    <div class="botJian"></div>
+                </div>
+            </div>
+            <!-- 虚线 -->
+            <div class="footerDash"></div>
+            <!-- 备案声明 -->
+            <div class="beian">备案声明</div>
+        </footer>
+    </div>
+    <!-- 模板 -->
+    <div id="itemHtml" style="display:none;">
+        <div class="content_one" articleid="$articleId$">
+            <img src="img/list_img01.jpg" />
+            <div class="liTxt content_text">
+                <h5>$articleTitle$</h5>
+                <span>$updateTitle$</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        // search匹配？   hash匹配#   getqueryString-取到对应的字符串
+        var id = getParams('articleId')
+        console.log(id)
+        getList ()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ()
+        function getParams(type) {
+            var reg = new RegExp("(^|&)" + type + "=([^|&]*)(&|$)")
+            // sunstring从开始到结束   substr从开始到截取的长度
+            var value = window.location.search.substring(1).match(reg)
+            // test     match     exec
+            if (value == null) {
+                return null
+            } else {
+                return value[2]
+            }
+        }
+        function getList() {
+            var res = articleData["xiaoniaoNews"+id]
+            var Data=res.data
+            console.log(Data)
+                var htmlModel = $('#itemHtml').html()
+                htmlModel = htmlModel.replace("$articleId$", Data.sysId)
+                htmlModel = htmlModel.replace("img/list_img01.jpg", Data.coverImg)
+                htmlModel = htmlModel.replace("$articleTitle$", Data.title)
+                htmlModel = htmlModel.replace("$updateTitle$", Data.typeTitle)
+                $('#modelDiv').append(htmlModel)
+
+
+           
+        }
+    </script>
+    <script type="text/javascript">
+        $('li .plush').hide()
+        $('li').hover(function () {
+            // console.log($(this).index())
+            $('li .plush').slideUp()
+            $('li .plush').eq($(this).index()).slideDown()
+        }, function () {
+            // console.log($(this).index())
+            $('li .plush').slideUp()
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

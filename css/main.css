@@ -1,0 +1,15 @@
+#itemHtml{
+    width: 100%;
+    height: auto;
+}
+.content_one{
+    width: 80%;
+    height: 650px;
+    margin: 0px auto;
+    float: initial;
+}
+.content_one img{
+    width: 80%;
+    height: 450px;
+    display: block;
+}

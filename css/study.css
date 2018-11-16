@@ -1,0 +1,348 @@
+
+.cover{
+    width: 100%;
+    height: 100%;
+    background-color: #299AD6;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    font-family: '楷体';
+    z-index: 9999;
+}
+.bird{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+.welcomTxt{
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 600px;
+    margin-left: -300px;
+}
+.welcomTxt h2{
+    font-size: 32px;
+    letter-spacing: 5px;
+}
+.welcomTxt span{
+    font-size: 38px;
+    position: relative;
+}
+.leftTip{
+    width: 20px;
+    height: 20px;
+    background: url(../img/aboutxiaoniao/yinhao1_zuo.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -10%;
+    left: -10%;
+}
+.rightTip{
+    left: initial;
+    top: initial;
+    bottom: -10%;
+    right: -10%;
+    background: url(../img/aboutxiaoniao/yinhao1_you.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.welcomTxt b{
+    font-size: 18px;
+    display: block;
+    line-height: 24px;
+    padding-top: 20px;
+    font-weight: normal;
+}
+.allScroll{
+    position: absolute;
+    width: 100%;
+    height: 500%;
+    top: 0;
+}
+.one{
+    width: 100%;
+    height: 20%;
+}
+.wrapper{
+    position: relative;
+    overflow: hidden;
+    font-family: '楷体';
+}
+.oneCenter{
+    width: 970px;
+    position: relative;
+    margin: 0px auto;
+}
+.one header{
+    height: 30px;
+    width: 100%;
+    background: url(../img/aboutxiaoniao/beader_bg.jpg) no-repeat 0 0;
+}
+.one header .logo{
+    width: 134px;
+    height: 100%;
+    float: left;
+}
+.headerCenter{
+    width: 960px;
+    margin: 0px auto;
+}
+.topUl{
+    float: left;
+    margin-left: 30px;
+}
+.topUl li{
+    float: left;
+    padding: 0 20px;
+    color: #C9C7CD;
+    font-size: 14px;
+    line-height: 30px;
+}
+.topUl li:hover{
+    color: white;
+}
+.wLogo{
+    width: 272px;
+    height: 272px;
+    margin: 0px auto;
+    margin-top: 80px;
+    background: url(../img/aboutxiaoniao/xiaoniao_welcome_icon3.gif) no-repeat left top;
+    background-size: 100% 100%;
+}
+.feicuiTxt{
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+}
+.feicuiTxt h2{
+    font-size: 42px;
+    line-height: 52px;
+}
+.feicuiTxt p{
+    line-height: 36px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.feicuiTxt span{
+    font-size: 38px;
+    position: relative;
+}
+.feicuiTxt b{
+    margin-top: 20px;
+    font-weight: normal;
+    display: block;
+    line-height: 26px;
+}
+.gaiTitle{
+    text-align: center;
+    color: #311859;
+    font-size: 42px;
+    padding-top: 65px;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+.gaiOneTxt{
+    width: 640px;
+    height: 84px;
+    margin: 0px auto;
+
+    position: relative;
+    line-height: 28px;
+    color: #311859;
+    font-size: 18px;
+}
+.leftYin{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    background: url(../img/aboutxiaoniao/yinhao3_zuo.png) no-repeat 0 0;
+
+}
+.rightYin{
+    top: initial;
+    bottom: -10%;
+    right: -10%;
+    left: initial;
+    background: url(../img/aboutxiaoniao/yinhao3_you.png) no-repeat 0 0;
+}
+.ulOne{
+    margin: 0px auto;
+}
+.ulOne li{
+    margin-top: 40px;
+    width: 194px;
+    height: 380px;
+    float: left;
+    padding: 0 20px;
+}
+.leftOneBtn{
+    width: 58px;
+    height: 58px;
+    background: url(../img/aboutxiaoniao/goleft.png) no-repeat left top;
+    position: absolute;
+    left: -25%;
+    top: 50%;
+}
+.rightOneBtn{
+    background: url(../img/aboutxiaoniao/goright.png) no-repeat right top;
+    right: -25%;
+    left: initial;
+}
+.feiTitle{
+    color: white;
+    font-weight: normal;
+    margin-bottom: 120px;
+}
+.mainOne{
+    width: 824px;
+    height: 375px;
+    margin: 0px auto;
+    position: relative;
+    padding: 0 68px;
+}
+.four{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.coverFour{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.fourEr{
+    top: 0px;
+    right: 0px;
+    left: initial;
+}
+.fourSan{
+    top: initial;
+    bottom: 0px;
+    left: 0;
+}
+.fourSi{
+    bottom: 0px;
+    top: initial;
+    right: 0px;
+    left: initial;
+}
+.circl{
+    width: 74px;
+    height: 74px;
+    background: url(../img/aboutxiaoniao/jiazhi_quanquan.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    line-height: 74px;
+    text-align: center;
+    color: white;
+    float: left;
+}
+.number{
+    padding: 25px 0;
+    float: left;
+    width: 412px;
+}
+.numContent{
+    width: 260px;
+    height: 40px;
+    padding: 17px 0;
+    margin-left: 28px;
+    line-height: 20px;
+    color: white;
+    float: left;
+}
+.yun{
+    color: #311859;
+    margin-bottom: 40px;
+}
+.txt{
+    line-height: 40px;
+    height: 40px;
+    width: 906px;
+    color: #757478;
+    font-size: 17px;
+    border-bottom: 1px dashed #D0D0D4;
+}
+.btnDiv{
+    margin: 0px auto ;
+    margin-top: 20px;
+    width: 180px;
+}
+.yiBtn{
+    width: 80px;
+    height: 8px;
+    float: left;
+    background: url(../img/aboutxiaoniao/xiaoniaoyun_btn.png) no-repeat top center;
+}
+.erBtn{
+    margin-left: 20px;
+    background: url(../img/aboutxiaoniao/xiaoniaoyun_btn.png) no-repeat bottom center;
+}
+.mousePic{
+    width: 30px;
+    height: 90px;
+    margin: 0px auto;
+    margin-top: 10px;
+}
+.oneBg{
+    background: url(../img/aboutxiaoniao/app&contacts_bg.gif) no-repeat center center;
+    background-size: 100% 100%;
+}
+.lastCenter{
+    width: 900px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+.erweima{
+    width: 317px;
+    height: 315px;
+    background: url(../img/aboutxiaoniao/app_downcode.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    margin-top: 76px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    float: left;
+}
+.xiazai{
+    color: white;
+    font-size: 48px;
+    text-align: center;
+    width: 382px;
+    height: 315px;
+    float: left;
+    line-height: 275px;
+    font-weight: normal;
+    margin-top: 76px;
+}
+.lainxiKe{
+    float: right;
+    width: 450px;
+    padding-top: 20px;
+}
+.lainxiKe h3{
+    color: #311859;
+}
+.pointdash{
+    height: 8px;
+    margin: 5px 0;
+    width: 280px;
+    background: url(../img/lianxi_kuaier_bg.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.lainxiKe p{
+    color: #311859;
+    line-height: 40px;
+    height: 40px;
+}

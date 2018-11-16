@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>卓新思创</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="css/list.css">
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/listData.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--头部导航-->
+        <header>
+            <div class="headerCenter clearfix">
+                <div class="logo">
+                    <img src="img/logo.png" />
+                </div>
+                <nav class="topNav">
+                    <ul class="clearfix">
+                        <li>首页<div class="plush"></div>
+                        </li>
+                        <li class="div">
+                            小鸟掌学
+                            <span class="jiantou">
+                                <img src="img/nav_xiajiantou.png" />
+                            </span>
+                            <div class="plush">
+                                <p>小鸟掌学主页</p>
+                                <p>小鸟掌学概述</p>
+                                <p>对企业的价值</p>
+                                <p>小鸟掌云</p>
+                                <p>微课联盟</p>
+                                <p>APP下载</p>
+                            </div>
+                        </li>
+                        <li>小鸟动态<div class="plush"></div>
+                        </li>
+                        <li class="div">
+                            企业文化
+                            <span class="jiantou">
+                                <img src="img/nav_xiajiantou.png" />
+                            </span>
+                            <div class="plush">
+                                <p>公司理念</p>
+                                <p>公司文化</p>
+                                <p>公司氛围</p>
+                            </div>
+                        </li>
+                        <li class="div">
+                            人力资源
+                            <span class="jiantou">
+                                <img src="img/nav_xiajiantou.png" />
+                            </span>
+                            <div class="plush">
+                                <p>人才理念</p>
+                                <p>团队介绍</p>
+                                <p>招聘信息</p>
+                            </div>
+                        </li>
+                        <li>联系我们<div class="plush"></div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!--主体内容-->
+        <div class="mainContent listContent clearfix">
+            <!--版心-->
+            <div class="mainCenter listCenter clearfix">
+
+                <!--公司简介标题-->
+                <div class="company">
+                    <h1>卓新动态</h1>
+                    <p>About&nbsp;&nbsp;&nbsp;Company</p>
+                </div>
+                <!--公司简介下面省略号-->
+                <div class="now clearfix">
+                    <img src="img/next&prev_now.png" />
+                    <img src="img/next&prev_now.png" />
+                    <img src="img/next&prev_now.png" />
+                </div>
+                <!--毛笔-->
+                <div class="liebiao">
+                    <h2>列表<span></span></h2>
+
+                </div>
+                <!-- 列表 每个模块 -->
+                <ul class="listUl clearfix" id="articleList">
+                   
+
+                 
+                </ul>
+                <!-- 按钮 -->
+                <div class="mouseBtn">
+
+                </div>
+            </div>
+            <div class="fudong"></div>
+        </div>
+        <!-- 底部   音乐都来咪 -->
+        <footer class="hhh">
+            <div class="mainYin">
+                <ul class="clearfix">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="rightBtn">
+                    <div class="topJian"></div>
+                    <div class="botJian"></div>
+                </div>
+            </div>
+            <!-- 虚线 -->
+            <div class="footerDash"></div>
+            <!-- 备案声明 -->
+            <div class="beian">备案声明</div>
+        </footer>
+    
+    </div>
+     <!-- 模板 -->
+    <li id="itemHtml" style="display:none;">
+            <div class="content_one" articleid="$articleId$">
+                <img src="img/list_img01.jpg" />
+                <div class="liTxt content_text">
+                    <h5>$articleTitle$</h5>
+                    <span>$updateTime$</span>
+                    <p>$describe$</p>
+                </div>
+            </div>
+        </li>
+        <!-- 
+            1.根据设计稿完成网页
+             1.1根据静态网页转换成动态数据
+              1.1.1 img title time des（描述）
+              1.1.2数据渲染：模板或者字符串拼接（es5拼接和es6模板字符串）两种模式
+         -->
+    <script>
+        var global=global||{}//存储为全局变量
+        $(function(){
+            
+            $('.mouseBtn').click(function(){
+                pageStart++
+                if(pageStart<global.page){
+                     getList()
+                }else{
+                    $('.mouseBtn').hide()
+                }
+               
+            })
+            $('#articleList').delegate('.content_one','click',function(){
+                // delegate-事件委托。
+                var articleId=$(this).attr('articleId')
+                console.log(articleId)
+                window.location="main.html?articleId="+articleId
+                // window.location---点击本页跳转，可以向跳转的页面传输参数（在跳转的路径后面加上？想要传到跳转页面的参数）
+                // window.open---点击打开新窗口跳转，不可以向跳转的页面传输参数
+            })
+            getList()
+        })
+        var pageStart=0   //当做页数
+
+        //pagesize每页条数   count总条数  
+        function getList(){
+           
+        //     $.ajax({
+        //         url:"1.json",
+        //         type:"get",
+        //         async:false,
+        //         dataType:"json",
+        //         data:{
+
+        //         },
+        //         // success:function(){
+
+        //         // },         3.0版本以前的写法
+
+        //     }).done(function(result){//done是3.0版本以后的写法
+
+        //     })
+        var result = listData["listData0" + pageStart]
+        // 用拼接方法拿到listDatalistData0X
+        global.count=result.data.count
+        // 总条数
+        var pageSize=result.data.pageSize
+        // 每页的条数
+        var list=result.data.list
+        if(pageStart==0){
+            $('#articleList').html('')
+            // 有时模板盒子里面可能会有其他数据，所以在操作之前先给模板盒子清空数据
+        }
+        for (var i = 0; i < list.length; i++) {
+            // 循环遍历
+            var htmlModel = $('#itemHtml').html()//$相当于匹配   replace数组操作方法-替换
+            // 拿到模板里的所有节点
+            htmlModel = htmlModel.replace("$articleId$", list[i].sysId)
+            htmlModel = htmlModel.replace("img/list_img01.jpg", list[i].coverImg)
+            htmlModel = htmlModel.replace("$articleTitle$", list[i].title)
+            htmlModel = htmlModel.replace("$updateTime$", list[i].creatAt)
+            htmlModel = htmlModel.replace("$describe$", list[i].describe)
+            // 用数组操作方法replace找到需要替换的内容的位置，再将动态数据替换进去
+            $('#articleList').append(htmlModel)
+            // 把模板添加到模板盒子里面
+        }
+        
+        global.page=Math.ceil(global.count/pageSize)
+        // 用总条数除以每页的条数，得到总页数
+        if(pageStart>global.page){
+            // 如果设定的页数大于总页数的话，就隐藏按钮
+            $('.mouseBtn').hide()
+        }
+
+           
+        }
+    </script>
+    <script type="text/javascript">
+        $('li .plush').hide()
+        $('li').hover(function () {
+            // console.log($(this).index())
+            $('li .plush').slideUp()
+            $('li .plush').eq($(this).index()).slideDown()
+        }, function () {
+            // console.log($(this).index())
+            $('li .plush').slideUp()
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

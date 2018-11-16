@@ -1,0 +1,93 @@
+.listCenter{
+    overflow: hidden;
+
+}
+.listContent{
+   position: relative;
+   height: 1500px;
+}
+.fudong{
+    position: absolute;
+    top: 100%;
+    background-image: url(../img/map_topimg.png) ;
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100%;
+    height: 32px;
+}
+.liebiao{
+	position: relative;
+	width: 1060px;
+}
+.liebiao h2{
+	font-size: 24px;
+	color: #534172;
+	height: 40px;
+	position: relative;
+	background: url(../img/pen_line.png) no-repeat bottom center;
+	background-size: 100%;
+	margin-bottom: 40px;
+}
+.liebiao h2 span{
+	position: absolute;
+	right: -4%;
+	bottom: -5%;
+	width: 61px;
+	height: 54px;
+	background: url(../img/pen.png) 0 0;
+}
+#itemHtml{
+    width: 510px;
+    height: 196px;
+    margin-bottom: 40px;
+    padding-top: 44px;
+    padding-left: 20px;
+    float: left;
+    background-color: #fff;
+}
+#itemHtml:nth-child(2n){
+    float: right;
+}
+.content_one{
+    width: 510px;
+    height: 165px;
+    float: left;
+    margin-bottom: 40px;
+
+}
+.content_one img{
+    width: 260px;
+    height: 165px;
+    float: left;
+}
+.liTxt{
+    width: 215px;
+    padding-left: 20px;
+    float: left;
+    color: #534172;
+}
+.liTxt h5{
+    font-size: 18px;
+    height: 48px;
+    line-height: 24px;
+}
+.liTxt span{
+    font-size: 14px;
+    color: #8D8C8F;
+    height: 40px !important;
+    line-height: 40px !important;
+}
+.liTxt span{
+    font-size: 14px;
+    line-height: 20px;
+    height: 60px;
+
+}
+.mouseBtn{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+.mainContent{
+    height: auto;
+}
